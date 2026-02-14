@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjetas Giratorias</title>
+
+<style>
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display:flex;
+    gap:40px;
+}
+
+
+.card{
+    width:300px;
+    height:400px;
+    perspective:1000px;
+}
+
+
+.card-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+
+.card-front, .card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+.card-front img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+.card-back{
+    background:linear-gradient(135deg,#1e293b,#334155);
+    color:white;
+    transform: rotateY(180deg);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    text-align:center;
+}
+
+.card-back h2{
+    margin-bottom:15px;
+}
+
+.card-back p{
+    font-size:14px;
+    line-height:1.6;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="img1.jpeg" alt="Imagen">
+            </div>
+            <div class="card-back">
+                <h2>Compañeros</h2>
+                <p>Nuevo ingreso,etapa de convivencia,contactos,colegas, trabajo en equipo,eramos desconocidos, hasta que todo cambio y empezamos a unirnos, compartimos historias, salidas, trabajo en equipo.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="img2.jpeg" alt="Imagen">
+            </div>
+            <div class="card-back">
+                <h2>Amigos</h2>
+                <p>Apoyo en todo momento, 24/7,la union hace la fuerza, en las buenas y en las malas hasta en las peores, union de individuos, proceso de adaptacion, lazos mas fuertes entre grupo.</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="img3.jpg" alt="Imagen">
+            </div>
+            <div class="card-back">
+                <h2>FAMILIA</h2>
+                <p>Paso de todo, y aqui seguimos, estresados, ciegos,cojos,viejos,con la realidad alterada,con trabajos que entregar,se fue la luz, clases en linea, no ha llegado la beca, pero sobre todo unidos para acabar con todo lo que nos impide continuar y seguir mejorando .</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
